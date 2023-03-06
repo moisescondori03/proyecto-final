@@ -94,7 +94,7 @@ propiedad list-style: none; y desaparecen*/
     /*GRID*/
     display: grid;
     /*Aqui indicamos como se va a SUB-dividir el contenedor-main-aside*/
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr ;
     gap: 20px;
     /*Aqui indicamos donde se ubicara contenedor-main-aside dentro de main-container*/
     grid-column-start: 2;
@@ -113,7 +113,8 @@ propiedad list-style: none; y desaparecen*/
     /*GRID*/
     display: grid;
     /*Aqui indicamos como se va a SUB-dividir container-product dentro del contenedor-main-aside*/
-    grid-template-columns: repeat(3,1fr);
+    /*grid-template-columns: repeat(3,1fr);*/
+    grid-template-columns: 1fr;
     gap: 20px;
     /*FLEX*/
     
@@ -186,7 +187,7 @@ propiedad list-style: none; y desaparecen*/
 }
 .video iframe{
     width: 900px;
-    height: 500px;
+    height: 350px;
 
 }
 
@@ -196,7 +197,7 @@ propiedad list-style: none; y desaparecen*/
     align-items: center;
 
     background-color: yellow;
-   
+    
     grid-column-start: 4;
     grid-column-end: 10;
     grid-row-start: 4;
@@ -213,7 +214,7 @@ Recordá que hay tres opciones para agregar colores: hexadecimal, rgb o con su n
     display: flex;
     background-color: black;
     width: 100%;
-    height: 50px;
+    /*height: 50px;*/
     flex-direction: column;
     grid-column-start: 1;
     grid-column-end: 13;
@@ -388,6 +389,313 @@ próxima tarea se resolverá.*/
     /*max-width: 2000px;*/
     display: grid;
     /*Aqui indicamos como se va a DIVIDIR el contenedor main-container*/
+    grid-template-columns: repeat(6,1fr);/*12 columnas*/
+    grid-template-rows: 100px 1fr 100px ;/*3 filas*/
+    gap: 20px;
+}
+.container-staff{
+    grid-template-columns: 1fr;
+
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    text-align: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.tabla{
+    background-color: deepskyblue;
+}
+
+/*=================================
+    ESTILOS: DESKTOP
+==================================*/
+@media screen and (min-width:1024px){
+
+    .main-container{
+        width: 100%;
+        /*max-width: 2000px;*/
+        display: grid;
+        /*Aqui indicamos como se va a DIVIDIR el contenedor main-container*/
+        grid-template-columns: repeat(12,1fr);/*12 columnas*/
+        grid-template-rows: 100px 1fr 500px 200px 100px ;/*3 filas*/
+        gap: 20px;
+    
+        background-image: url(images/vector3.png);
+        
+        background-size: 100%;
+        background-position: bottom;
+    }
+/*=================================
+    ESTILOS: MAIN
+==================================*/
+.main-title{
+    margin: 20px;
+    background-color:orangered;
+    border: 1px solid black;
+    color:black;
+}
+.contenedor-main-aside{
+    width: 100%;
+    /*max-width: 2000px;*/
+    /*GRID*/
+    display: grid;
+    /*Aqui indicamos como se va a SUB-dividir el contenedor-main-aside*/
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    /*Aqui indicamos donde se ubicara contenedor-main-aside dentro de main-container*/
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    
+    /*FLEX*/
+    
+    
+
+}
+
+.container-product{
+    /*GRID*/
+    display: grid;
+    /*Aqui indicamos como se va a SUB-dividir container-product dentro del contenedor-main-aside*/
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    /*FLEX*/
+    
+    
+}
+.shop-product{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+    /*padding: 20px;
+    margin: 20px;*/
+    width: 100%;
+    background-color: orangered;
+    min-height: 50px;
+}
+.shop-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+}
+.product-icon{
+    padding-bottom: 10px;
+}
+
+/*=================================
+    ESTILOS: ASIDE
+==================================*/
+
+
+.aside-title{
+    margin: 20px;
+}
+.container-mark{
+    /*GRID*/
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    /*LEX*/
+    
+}
+.mark-art{
+    border: 1px solid black;
+    background-color: deepskyblue;
+    /*padding: 20px;
+    margin: 20px;*/
+    width: 100%;
+    min-height: 50px;
+}
+.mark-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+    /*flex-grow: 1;*/
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+.video iframe{
+    width: 900px;
+    height: 500px;
+
+}
+
+#envio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: yellow;
+   
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+/*=================================
+    ESTILOS: HORARIOS
+==================================*/
+/*
+Crearemos un archivo llamado style con la extensión css donde se plasmarán las
+propiedades del css.
+
+Luego, se le asignan clases a las etiquetas HTML que necesitemos.
+
+A los días se le asignará la etiqueta html para que queden en negrita, y a los horarios se le
+asignará la etiqueta para que queden en cursiva.
+Una vez realizado, a los días se le definirá un color y un tamaño de letra mayor que al de los
+horarios, mientras que a los horarios solo se le dará el color correspondiente al día.
+*/
+.main-container-horarios{
+    width: 100%;
+    /*max-width: 2000px;*/
+    display: grid;
+    /*Aqui indicamos como se va a DIVIDIR el contenedor main-container*/
+    grid-template-columns: repeat(12,1fr);/*12 columnas*/
+    grid-template-rows: 100px 1fr 100px ;/*3 filas*/
+    gap: 20px
+}
+.container-horarios{
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+    text-align: center;
+    font-size: 1.5em;
+}
+table{
+    width: 100%;
+    height: 300px;
+    border: 2px solid blue;
+    
+}
+.titulo{
+    text-align: center;
+    color: #fff;
+    background:#000;
+    font-size: 1.5em;
+    caption-side: top;
+}
+th ,td{
+    width: 8%;
+    text-align: center;
+   
+}
+tr{
+    width: 50%;
+}
+.lunes,.h-lunes{
+
+    color: blue;
+    border: 1px solid blue;
+}
+.martes,.h-martes{
+    color: blueviolet;
+    border: 1px solid blue;
+
+}
+.miercoles,.h-miercoles{
+    color: aqua;
+    border: 1px solid blue;
+}
+.jueves,.h-jueves{
+    color: brown;
+    border: 1px solid blue;
+}
+.viernes,.h-viernes{
+    color: chartreuse;
+    border: 1px solid blue;
+}
+.sabado,.h-sabado{
+    color: coral;
+    border: 1px solid blue;
+}
+.domingo,.h-domingo{
+    color: crimson;
+    border: 1px solid blue;
+}
+
+.lunes,.martes,.miercoles,.jueves,.viernes,.sabado,.domingo{
+    font-size: 1.5em;
+   
+}
+
+/*=================================
+    ESTILOS: CONTACTO
+==================================*/
+/*Al formulario, por su parte, se le agrega un borde a gusto. En la próxima clase se adquirirá el
+conocimiento para darle más formato.
+
+Con respecto a los ítems de la lista, por el momento quedarán uno abajo de otro pero en la
+próxima tarea se resolverá.*/
+.main-form{
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    margin: 20px;
+}
+
+/*=================================
+    ESTILOS: MARCAS
+==================================*/
+
+/* RAY BAN*/
+
+.ray-img{
+    object-fit: cover;
+    /*margin: 10px;*/
+}
+.ray-product{
+    border: 1px solid black;
+    margin: 20px;
+}
+.ray-title{
+    margin: 20px;
+}
+
+/*OAKLEY*/
+
+.oakley-img{
+    object-fit: cover;
+}
+
+.oakley-title{
+    margin: 20px;
+
+}
+.oakley-product{
+    border: 1px solid black;
+    margin: 20px;
+}
+
+/*=================================
+    ESTILOS: NOSOTROS
+==================================*/
+.main-container-nosotros{
+    width: 100%;
+    /*max-width: 2000px;*/
+    display: grid;
+    /*Aqui indicamos como se va a DIVIDIR el contenedor main-container*/
     grid-template-columns: repeat(12,1fr);/*12 columnas*/
     grid-template-rows: 100px 1fr 100px ;/*3 filas*/
     gap: 20px;
@@ -403,4 +711,45 @@ próxima tarea se resolverá.*/
 }
 .tabla{
     background-color: deepskyblue;
+}
+
+/*=================================
+    ESTILOS: FOOTER
+==================================*/
+/*Con el footer se hará lo mismo, se le agrega una clase y se le dará color de fondo, ancho del 100%
+y altura conveniente con la página.
+Recordá que hay tres opciones para agregar colores: hexadecimal, rgb o con su nombre en inglés.*/
+.main-footer{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    /*height: 50px;*/
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 6;
+   
+}
+.copy{
+    color: white;
+    text-align: center;
+    
+}
+.icon-footer{
+    font-size: 1.5em;
+    border: 1px solid #454546;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+   
+    color: aliceblue;
+}
+.container-icon{
+    display: flex;
+    /*margin-top: 20px;*/
+    background-color: black;
+    /*flex: 1 1 auto;*/
+    
+}
 }
